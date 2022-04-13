@@ -7,7 +7,19 @@ class Solution
     static void Main(String[] args)
     {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+//S - split      
+        // C - compbinate
+        // M - Method
+        // C - Class 
+        // V - Varriable
 
+        //S;M;plasticCup()   -> plastic cup                        
+        //C;V;mobile phone  -> mobilePhone
+        //C;C;coffee machine -> CoffeeMachine
+        //S;C;LargeSoftwareBook -> large software book
+        //C;M;white sheet of paper  -> whiteSheetOfPaper()
+        //S;V;pictureFrame   -> picture frame
+        
 
         List<string> input = new List<string>();
 
