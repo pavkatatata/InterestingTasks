@@ -43,7 +43,7 @@ class Result
         
         for (int i = 0; i < arr.Count; i++)  // i = row
         {
-            int y = arr[i].Count - 1 - i;
+            int y = arr.Count - 1 - i;
 
             if (y < 0)
             {
