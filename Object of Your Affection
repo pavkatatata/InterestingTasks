@@ -1,12 +1,32 @@
+namespace ConsoleApp24
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "he / him");
+
+
+            sam.SetHobbies(new string[] {"listing to audibooks", "football", "biking"});
+
+            Console.WriteLine(sam.ViewProfile());
+
+
+
+
+        }
+    }
+}
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp4
+namespace ConsoleApp24
 {
-     class Profile
+    class Profile
     {
         public string name;
         public int age;
@@ -16,54 +36,41 @@ namespace ConsoleApp4
         public string[] hobbies;
 
         public Profile(string Name, int Age, string City, string County,
-            string Pronouns, string[] Hobbies)
+            string Pronouns)
         {
             this.name = Name;
             this.age = Age;
             this.city = City;
             this.country = County;
             this.pronouns = Pronouns;
+            this.hobbies = new string[0];
 
-            
         }
 
         public string ViewProfile()
         {
 
-           string info = $"{name} {age} {city} {country} {pronouns}";
+            string info = $"Name: {name}\nAge: {age}\nCity: {city}\nCountry: {country}\nPronouns: {pronouns}";
+
+           
+
+            info += "\nHobbies:\n";
+            foreach (string item in this.hobbies)
+            {
+                info += $"- {item}\n";
+            }
 
             return info;
         }
 
-        public void SetHobbies(string[] Hobbies)
+        public void SetHobbies(string[] hobbies)
         {
-          this.hobbies = Hobbies;
+            this.hobbies = hobbies;
 
 
-            Console.WriteLine(Hobbies);
         }
 
 
 
     }
 }
-
-using System;
-
-namespace ConsoleApp4
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "he / him",);
-
-
-            Console.WriteLine( sam.ViewProfile());
-
-
-            
-
-        }
-    }
-}   
