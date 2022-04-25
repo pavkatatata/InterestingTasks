@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "he / him");
+
+           
+
+
+
+
+        }
+    }
+}   
+
+     class Profile
+    {
+        public string name;
+        public int age;
+        public string city;
+        public string country;
+        public string pronouns;
+        public string[] hobbies;
+
+        public Profile(string Name, int Age, string City, string county,
+            string pronouns)
+        {
+            this.name = Name;
+            this.age = Age;
+            this.city = City;
+            this.country = county;
+            this.pronouns = pronouns;
+
+
+
+
+        }
+    }
+}
