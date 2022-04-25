@@ -6,25 +6,6 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp4
 {
-
-
-namespace ConsoleApp4
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "he / him");
-
-           
-
-
-
-
-        }
-    }
-}   
-
      class Profile
     {
         public string name;
@@ -34,18 +15,55 @@ namespace ConsoleApp4
         public string pronouns;
         public string[] hobbies;
 
-        public Profile(string Name, int Age, string City, string county,
-            string pronouns)
+        public Profile(string Name, int Age, string City, string County,
+            string Pronouns, string[] Hobbies)
         {
             this.name = Name;
             this.age = Age;
             this.city = City;
-            this.country = county;
-            this.pronouns = pronouns;
+            this.country = County;
+            this.pronouns = Pronouns;
+
+            
+        }
+
+        public string ViewProfile()
+        {
+
+           string info = $"{name} {age} {city} {country} {pronouns}";
+
+            return info;
+        }
+
+        public void SetHobbies(string[] Hobbies)
+        {
+          this.hobbies = Hobbies;
+
+
+            Console.WriteLine(Hobbies);
+        }
 
 
 
+    }
+}
+
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Profile sam = new Profile("Sam Drakkila", 30, "New York", "USA", "he / him",);
+
+
+            Console.WriteLine( sam.ViewProfile());
+
+
+            
 
         }
     }
-}
+}   
