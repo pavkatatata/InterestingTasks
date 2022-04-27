@@ -1,0 +1,84 @@
+namespace DatingProfile
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Profile sam = new Profile($"Sam Drakkila", 30);
+
+
+           // sam.SetHobbies(new string[] {"listing to audibooks", "football", "biking"});
+
+            Console.WriteLine(sam.ViewProfile());
+
+
+
+
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DatingProfile
+{
+    class Profile
+    {
+        public string name;
+        public int age;
+        public string city;
+        public string country;
+        public string pronouns;
+        public string[] hobbies;
+
+        private int Age { get; set; }
+
+        public Profile(string Name,
+            int Age,
+            string City = "n/a",
+            string County = "n/a",
+            string Pronouns = "they/them")
+        {
+            this.name = Name;
+            this.age = Age;
+            this.city = City;
+            this.country = County;
+            this.pronouns = Pronouns;
+            this.hobbies = new string[0];
+
+        }
+
+        public string ViewProfile()
+        {
+
+            string info = $"Name: {name}\nAge: {age}\nCity: {city}\nCountry: {country}\nPronouns: {pronouns}";
+
+            if (this.hobbies.Length > 0)
+            {
+
+                info += "\nHobbies:\n";
+                foreach (string item in this.hobbies)
+                {
+                    info += $"- {item}\n";
+                }
+            }
+
+
+            return info;
+        }
+
+        public void SetHobbies(string[] hobbies)
+        {
+            this.hobbies = hobbies;
+
+
+        }
+
+
+
+    }
+}
